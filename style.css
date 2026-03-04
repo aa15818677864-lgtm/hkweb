@@ -3103,3 +3103,101 @@ body {
         border: 1px solid rgba(202, 168, 106, 0.35);
     }
 }
+
+
+/* ===== 首页hero夜景金色商务风优化 ===== */
+.home-page .hero {
+    background-image: url('images/hongkong-city.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+    padding-top: 120px !important;
+    padding-bottom: 80px !important;
+    min-height: auto !important;
+}
+
+.home-page .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45) !important;
+}
+
+.home-page .hero-image {
+    display: none !important;
+}
+
+.home-page .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.home-page .hero-title {
+    font-size: 52px !important;
+    font-weight: 700;
+    line-height: 1.2 !important;
+    color: #ffffff !important;
+}
+
+.home-page .hero-subtitle {
+    font-size: 18px !important;
+    color: #d4af37 !important;
+    margin-top: 20px;
+}
+
+.home-page .primary-btn {
+    background: #d4af37 !important;
+    color: #000 !important;
+    padding: 14px 28px !important;
+    border-radius: 30px !important;
+    font-size: 16px;
+}
+
+.home-page .secondary-btn {
+    background: #25D366 !important;
+    color: #fff !important;
+    padding: 14px 28px !important;
+    border-radius: 30px !important;
+    border: 0 !important;
+}
+
+.home-page .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 60px !important;
+}
+
+.home-page .hero-stats .stat-item {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    padding: 0 !important;
+    text-align: center;
+}
+
+.home-page .hero-stats .stat-number {
+    font-size: 42px !important;
+    color: #d4af37 !important;
+    font-weight: 700;
+}
+
+.home-page .hero-stats .stat-text {
+    font-size: 14px !important;
+    color: #ccc !important;
+}
+
+@media (max-width: 768px) {
+    .home-page .hero-title {
+        font-size: 34px !important;
+    }
+
+    .home-page .hero-stats {
+        gap: 24px;
+        margin-top: 30px !important;
+    }
+}
