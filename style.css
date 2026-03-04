@@ -2979,3 +2979,127 @@ body {
         padding: 22px 18px;
     }
 }
+
+
+/* ===== 2026-03 首屏与房产页视觉优化 ===== */
+:root {
+    --primary-color: #7c0f1d;
+    --accent-color: #caa86a;
+}
+
+.hero {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    min-height: auto !important;
+}
+
+.hero-content {
+    padding: 0 !important;
+}
+
+.hero-text h2 {
+    font-size: 40px !important;
+    line-height: 1.3 !important;
+}
+
+.hero-lead {
+    font-size: 18px !important;
+}
+
+.hero-actions .btn {
+    width: min(100%, 240px);
+    max-width: 240px;
+}
+
+.fc-property-highlight {
+    background: #f6f1eb !important;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        display: none !important;
+    }
+
+    .hero-text h2 {
+        font-size: 26px !important;
+    }
+
+    .hero-lead {
+        font-size: 15px !important;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 240px;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr !important;
+    }
+
+    .stat-item {
+        padding: 16px !important;
+        margin-bottom: 12px;
+    }
+
+    .stat-item h3 {
+        font-size: 18px !important;
+        line-height: 1.3 !important;
+    }
+
+    .stat-item p {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        white-space: normal !important;
+    }
+}
+
+
+/* ===== 首页PC首屏精修（律师官网风格） ===== */
+@media (min-width: 769px) {
+    .home-page .hero {
+        padding-top: 120px !important;
+        padding-bottom: 80px !important;
+        min-height: auto !important;
+    }
+
+    .home-page .hero-stats {
+        margin-top: 40px !important;
+    }
+
+    .home-page .stat-item {
+        background: #f6f1eb !important;
+        border-radius: 12px !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+        padding: 28px !important;
+    }
+
+    .home-page .stat-number {
+        font-size: 32px !important;
+        font-weight: 700 !important;
+    }
+
+    .home-page .stat-text {
+        font-size: 16px !important;
+        color: #666 !important;
+    }
+
+    .home-page .service-tags {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 8px;
+    }
+
+    .home-page .service-tags span {
+        background: #f6f1eb;
+        padding: 10px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        color: var(--primary-color);
+        border: 1px solid rgba(202, 168, 106, 0.35);
+    }
+}
