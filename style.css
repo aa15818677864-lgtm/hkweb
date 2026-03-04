@@ -3261,3 +3261,332 @@ body {
         gap: 10px;
     }
 }
+
+/* ===== Final responsive visual optimization (2026-03-04) ===== */
+:root {
+    --site-bg: #f5f2ec;
+    --site-surface: #fffdf9;
+    --site-brand: #6f1d2a;
+    --site-brand-dark: #4f131d;
+    --site-accent: #c9a35c;
+    --site-text: #231f1b;
+    --site-muted: #6e6257;
+    --site-border: rgba(111, 29, 42, 0.16);
+    --site-shadow: 0 12px 28px rgba(26, 19, 14, 0.1);
+}
+
+.home-page {
+    background: var(--site-bg);
+    color: var(--site-text);
+}
+
+.home-page section {
+    padding: clamp(64px, 8vw, 92px) 0;
+}
+
+.home-page .section-title {
+    margin-bottom: clamp(22px, 3vw, 34px);
+    line-height: 1.3;
+}
+
+.home-page .header {
+    background: rgba(79, 19, 29, 0.96) !important;
+    border-bottom: 1px solid rgba(201, 163, 92, 0.35);
+    padding: 10px 0;
+}
+
+.home-page .header .container {
+    min-height: 64px;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.home-page .logo {
+    flex: 0 0 auto;
+}
+
+.home-page .logo h1 {
+    font-size: clamp(1.08rem, 1.8vw, 1.35rem);
+    margin: 0;
+}
+
+.home-page .menu-toggle {
+    margin-left: auto;
+}
+
+.home-page .nav a {
+    font-size: 0.96rem;
+    line-height: 1.35;
+}
+
+.home-page .hero {
+    min-height: auto;
+    padding: 128px 0 74px !important;
+    background: linear-gradient(120deg, rgba(33, 11, 16, 0.86), rgba(33, 11, 16, 0.62)), url('img/banner1.webp') center / cover no-repeat !important;
+}
+
+.home-page .hero-content {
+    min-height: auto;
+    gap: 20px;
+}
+
+.home-page .hero-title {
+    font-size: clamp(2.05rem, 4vw, 3rem) !important;
+    line-height: 1.22;
+    letter-spacing: 0.01em;
+}
+
+.home-page .hero-subtitle {
+    font-size: clamp(1rem, 1.8vw, 1.22rem) !important;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.home-page .hero-actions {
+    margin-top: 6px;
+    gap: 12px;
+}
+
+.home-page .hero-actions .btn {
+    min-height: 48px;
+    min-width: 180px;
+    font-size: 1rem;
+}
+
+.home-page .hero-stats {
+    margin-top: 18px;
+    padding: 14px;
+    gap: 14px;
+}
+
+.home-page .hero-stats .stat-item {
+    padding: 16px 14px !important;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.92) !important;
+}
+
+.home-page .hero-stats .stat-number {
+    font-size: clamp(1.75rem, 2.8vw, 2.35rem) !important;
+    line-height: 1.25;
+}
+
+.home-page .hero-stats .stat-text {
+    font-size: 1rem !important;
+    color: var(--site-muted) !important;
+}
+
+.home-page .service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 900px;
+}
+
+.home-page .service-tags span {
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    border-radius: 999px;
+    color: #fff;
+    padding: 8px 14px;
+    font-size: 0.92rem;
+}
+
+.home-page .property-card,
+.home-page .lawyer-card,
+.home-page .why-choose-item,
+.home-page .contact-form {
+    border-radius: 14px;
+    border: 1px solid var(--site-border);
+    box-shadow: var(--site-shadow);
+}
+
+.home-page .property-card,
+.home-page .service-item,
+.home-page .lawyer-card,
+.home-page .why-choose-item,
+.home-page .contact-form {
+    background: var(--site-surface);
+}
+
+.home-page .service-item {
+    min-height: 68px;
+}
+
+.home-page .case-list li,
+.home-page .specialty,
+.home-page .why-choose-text p,
+.home-page .about-text p,
+.home-page .about-detail-item p {
+    line-height: 1.8;
+}
+
+.home-page .btn,
+.home-page .submit-btn,
+.home-page .contact-us-btn {
+    cursor: pointer;
+}
+
+.home-page .submit-btn {
+    min-height: 50px;
+    font-size: 1.08rem;
+}
+
+@media (max-width: 991px) {
+    .home-page .hero {
+        padding-top: 112px !important;
+    }
+
+    .home-page .hero-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .home-page .hero-stats .stat-item {
+        justify-content: space-between;
+    }
+
+    .home-page .team-grid {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-page section {
+        padding: 52px 0;
+    }
+
+    .home-page .header .container {
+        min-height: 56px;
+    }
+
+    .home-page .menu-toggle {
+        display: flex !important;
+    }
+
+    .home-page .nav {
+        position: absolute !important;
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        background: rgba(79, 19, 29, 0.98);
+        border-bottom: 1px solid rgba(201, 163, 92, 0.35);
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+        transition: max-height 0.25s ease, opacity 0.2s ease;
+    }
+
+    .home-page .nav.active {
+        max-height: 340px;
+        opacity: 1;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .home-page .nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 0;
+    }
+
+    .home-page .nav li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        margin: 0;
+    }
+
+    .home-page .nav a {
+        width: 100%;
+        min-height: 46px;
+        padding: 11px 16px;
+        font-size: 0.98rem;
+        justify-content: flex-start;
+    }
+
+    .home-page .hero {
+        padding: 96px 0 44px !important;
+        background: linear-gradient(130deg, rgba(33, 11, 16, 0.93), rgba(33, 11, 16, 0.7)), url('img/banner1.webp') center / cover no-repeat !important;
+    }
+
+    .home-page .hero-image {
+        display: none !important;
+    }
+
+    .home-page .hero-title {
+        font-size: clamp(1.75rem, 8vw, 2.2rem) !important;
+    }
+
+    .home-page .hero-subtitle {
+        font-size: 1rem !important;
+        line-height: 1.7;
+    }
+
+    .home-page .hero-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .home-page .hero-actions .btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .home-page .hero-stats {
+        width: 100%;
+        padding: 10px;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.06) !important;
+    }
+
+    .home-page .hero-stats .stat-item {
+        gap: 14px;
+    }
+
+    .home-page .hero-stats .stat-number {
+        font-size: 1.5rem !important;
+    }
+
+    .home-page .hero-stats .stat-text {
+        font-size: 0.95rem !important;
+        white-space: nowrap;
+    }
+
+    .home-page .service-tags {
+        display: none;
+    }
+
+    .home-page .about-img,
+    .home-page .about-detail-img {
+        display: none;
+    }
+
+    .home-page .lawyer-card {
+        flex: 0 0 100% !important;
+    }
+
+    .home-page .lawyer-img {
+        height: 210px;
+    }
+
+    .home-page .service-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .home-page .service-item {
+        min-height: 56px;
+    }
+
+    .home-page .form-group input[type="text"],
+    .home-page .form-group input[type="tel"],
+    .home-page .form-group textarea,
+    .home-page .area-code-select,
+    .home-page .submit-btn {
+        min-height: 44px;
+        font-size: 16px;
+    }
+}
