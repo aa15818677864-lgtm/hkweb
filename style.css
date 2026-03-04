@@ -2349,6 +2349,11 @@ body {
     html,
     body {
         overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    body {
+        opacity: 1;
     }
 
     .container {
@@ -2488,5 +2493,151 @@ body {
 
     .section-title {
         font-size: 1.55rem;
+    }
+}
+
+/* Mobile Fix (<=768px) */
+@media (max-width: 768px) {
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    img,
+    video {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .header {
+        position: sticky !important;
+        top: 0;
+        z-index: 1000;
+        min-height: 56px;
+        padding: 10px 0;
+    }
+
+    .header .container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        gap: 6px;
+        white-space: nowrap;
+    }
+
+    .logo h1,
+    .logo p {
+        white-space: nowrap;
+    }
+
+    .nav {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        justify-content: flex-start;
+        gap: 14px;
+        padding: 0 2px;
+        min-width: max-content;
+    }
+
+    .nav li {
+        margin: 0;
+        flex: 0 0 auto;
+    }
+
+    .nav a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 10px 12px;
+    }
+
+    .nav::-webkit-scrollbar,
+    .nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    section > .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hero-stats {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .stat-item {
+        width: 100%;
+        padding: 16px 18px;
+    }
+
+    .stat-item h3,
+    .stat-item p {
+        word-break: keep-all;
+        overflow-wrap: normal;
+        white-space: normal;
+    }
+
+    .hero-stats .stat-item h3 {
+        font-size: clamp(2.5rem, 11vw, 3.25rem);
+        line-height: 1.1;
+        white-space: nowrap;
+    }
+
+    .hero-stats .stat-item p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .hero-stats .stat-item:nth-child(1) p,
+    .hero-stats .stat-item:nth-child(2) p,
+    .hero-stats .stat-item:nth-child(3) p {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header {
+        padding: 10px 0;
+    }
+
+    .hero-stats {
+        gap: 12px;
+    }
+
+    .stat-item {
+        padding: 16px;
     }
 }
