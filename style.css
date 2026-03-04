@@ -2198,6 +2198,106 @@ body {
     }
 }
 
+/* ===== Mobile polish for index/fangchan (<=768px) ===== */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .header {
+        padding: 8px 0;
+    }
+
+    .header .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 6px;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .logo h1,
+    .logo p {
+        margin: 0;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    .logo h1 {
+        font-size: 0.98rem;
+    }
+
+    .logo p {
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+    }
+
+    .nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+        padding-top: 2px;
+    }
+
+    .nav a {
+        min-height: 44px;
+        width: 100%;
+        padding: 6px 8px;
+        font-size: 0.86rem;
+    }
+
+    .hero {
+        padding-top: 128px;
+    }
+
+    .hero-content {
+        padding: 20px 0 42px;
+        text-align: center;
+    }
+
+    .hero img {
+        max-height: 220px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero-text h2 {
+        font-size: 1.7rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .why-choose-content {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .why-choose-item {
+        margin: 0;
+    }
+
+    .btn,
+    .submit-btn {
+        min-height: 44px;
+    }
+}
+
 @media (max-width: 480px) {
     .logo h1 {
         font-size: 1rem;
@@ -2241,5 +2341,152 @@ body {
 
     .contact-form {
         padding: 18px 14px;
+    }
+}
+
+/* ===== Mobile hero redesign (<=768px): text-first, no poster crop ===== */
+@media (max-width: 768px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    img,
+    video,
+    iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .header {
+        padding: 6px 0;
+    }
+
+    .header .container {
+        row-gap: 4px;
+    }
+
+    .logo {
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        gap: 6px;
+    }
+
+    .logo h1 {
+        font-size: 0.95rem;
+    }
+
+    .logo p {
+        font-size: 0.66rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav {
+        position: static;
+        width: 100%;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        padding: 0;
+    }
+
+    .nav li {
+        margin: 0;
+        padding: 0;
+        border-bottom: 0;
+        flex: 0 0 calc(33.333% - 6px);
+    }
+
+    .nav a {
+        width: 100%;
+        min-height: 44px;
+        padding: 6px 4px;
+        font-size: 0.84rem;
+        line-height: 1.2;
+    }
+
+    .hero {
+        background: var(--brand-900) !important;
+        padding: 40px 0 40px;
+    }
+
+    .hero::before,
+    .hero img,
+    .hero-eyebrow,
+    .expertise {
+        display: none !important;
+    }
+
+    .hero-content {
+        padding: 0;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .hero-text h2 {
+        font-size: 26px;
+        line-height: 1.35;
+        margin-bottom: 12px;
+        color: #fff;
+    }
+
+    .hero-lead {
+        font-size: 15px;
+        line-height: 1.6;
+        color: rgba(250, 247, 242, 0.9);
+        margin: 0 auto 18px;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        min-height: 44px;
+    }
+
+    .hero-stats {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        background: transparent;
+        border: 0;
+        padding: 0;
+    }
+
+    .stat-item {
+        min-width: 0;
+    }
+
+    .section-title {
+        font-size: 1.55rem;
     }
 }
