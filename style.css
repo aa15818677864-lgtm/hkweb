@@ -3104,109 +3104,160 @@ body {
     }
 }
 
+/* ===== 首页Hero与导航专业化重构 ===== */
+.home-page .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(90deg, rgba(74, 8, 18, 0.96), rgba(124, 15, 29, 0.94)) !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.28);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
 
-/* ===== 首页hero夜景金色商务风优化 ===== */
+.home-page .header .container {
+    max-width: 1200px;
+}
+
+.home-page .nav a,
+.home-page .logo h1 {
+    color: #fff !important;
+}
+
+.home-page .nav a:hover {
+    color: #d4af37 !important;
+}
+
 .home-page .hero {
-    background-image: url('img/zhbanner.webp') !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
     position: relative;
-    padding-top: 120px !important;
-    padding-bottom: 80px !important;
-    min-height: 640px !important;
+    min-height: 80vh;
+    padding: 132px 0 48px !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)), url('img/banner1.webp') center center / cover no-repeat !important;
 }
 
 .home-page .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(6, 12, 24, 0.62) !important;
+    display: none !important;
 }
 
 .home-page .hero-image {
     display: none !important;
 }
 
+.home-page .hero .container {
+    max-width: 1200px;
+}
+
 .home-page .hero-content {
     position: relative;
     z-index: 2;
+    min-height: calc(80vh - 180px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 520px;
     text-align: center;
+    gap: 18px;
 }
 
 .home-page .hero-title {
-    font-size: 52px !important;
+    font-size: 42px !important;
+    line-height: 1.25;
+    color: #fff !important;
     font-weight: 700;
-    line-height: 1.2 !important;
-    color: #ffffff !important;
 }
 
 .home-page .hero-subtitle {
     font-size: 18px !important;
-    color: #d4af37 !important;
-    margin-top: 20px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.92) !important;
+    max-width: 760px;
+}
+
+.home-page .hero-actions {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
 }
 
 .home-page .primary-btn {
     background: #d4af37 !important;
-    color: #000 !important;
-    padding: 14px 28px !important;
-    border-radius: 30px !important;
-    font-size: 16px;
+    border-color: #d4af37 !important;
+    color: #1f1a10 !important;
 }
 
 .home-page .secondary-btn {
-    background: #25D366 !important;
+    background: #7c0f1d !important;
+    border-color: #7c0f1d !important;
     color: #fff !important;
-    padding: 14px 28px !important;
-    border-radius: 30px !important;
-    border: 0 !important;
+}
+
+.home-page .hero-actions .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 
 .home-page .hero-stats {
-    display: flex;
-    justify-content: center;
-    align-self: stretch;
-    margin-top: auto !important;
-    padding-top: 34px;
-    border-top: 1px solid rgba(212, 175, 55, 0.35);
-    gap: 80px;
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    padding: 20px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .home-page .hero-stats .stat-item {
     background: transparent !important;
-    box-shadow: none !important;
     border: 0 !important;
-    padding: 0 !important;
+    box-shadow: none !important;
     text-align: center;
+    padding: 8px 10px !important;
 }
 
 .home-page .hero-stats .stat-number {
-    font-size: 42px !important;
+    font-size: 34px !important;
     color: #d4af37 !important;
-    font-weight: 700;
+    margin-bottom: 6px;
 }
 
 .home-page .hero-stats .stat-text {
-    font-size: 14px !important;
-    color: #ccc !important;
+    color: #fff !important;
+    font-size: 15px !important;
+    letter-spacing: 0.3px;
 }
 
 @media (max-width: 768px) {
+    .home-page .hero {
+        min-height: auto;
+        padding: 108px 0 40px !important;
+    }
+
     .home-page .hero-title {
-        font-size: 34px !important;
+        font-size: 28px !important;
+    }
+
+    .home-page .hero-subtitle {
+        font-size: 16px !important;
+    }
+
+    .home-page .hero-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .home-page .hero-actions .btn {
+        width: 100%;
     }
 
     .home-page .hero-stats {
-        gap: 24px;
-        margin-top: 30px !important;
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 }
