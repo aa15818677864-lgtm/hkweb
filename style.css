@@ -3055,3 +3055,51 @@ body {
         white-space: normal !important;
     }
 }
+
+
+/* ===== 首页PC首屏精修（律师官网风格） ===== */
+@media (min-width: 769px) {
+    .home-page .hero {
+        padding-top: 120px !important;
+        padding-bottom: 80px !important;
+        min-height: auto !important;
+    }
+
+    .home-page .hero-stats {
+        margin-top: 40px !important;
+    }
+
+    .home-page .stat-item {
+        background: #f6f1eb !important;
+        border-radius: 12px !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+        padding: 28px !important;
+    }
+
+    .home-page .stat-number {
+        font-size: 32px !important;
+        font-weight: 700 !important;
+    }
+
+    .home-page .stat-text {
+        font-size: 16px !important;
+        color: #666 !important;
+    }
+
+    .home-page .service-tags {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 8px;
+    }
+
+    .home-page .service-tags span {
+        background: #f6f1eb;
+        padding: 10px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        color: var(--primary-color);
+        border: 1px solid rgba(202, 168, 106, 0.35);
+    }
+}
