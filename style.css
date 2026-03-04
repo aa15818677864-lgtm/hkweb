@@ -3107,14 +3107,14 @@ body {
 
 /* ===== 首页hero夜景金色商务风优化 ===== */
 .home-page .hero {
-    background-image: url('images/hongkong-city.jpg') !important;
+    background-image: url('img/zhbanner.webp') !important;
     background-size: cover !important;
-    background-position: center !important;
+    background-position: center center !important;
     background-repeat: no-repeat !important;
     position: relative;
     padding-top: 120px !important;
     padding-bottom: 80px !important;
-    min-height: auto !important;
+    min-height: 640px !important;
 }
 
 .home-page .hero::before {
@@ -3124,7 +3124,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.45) !important;
+    background: rgba(6, 12, 24, 0.62) !important;
 }
 
 .home-page .hero-image {
@@ -3134,6 +3134,12 @@ body {
 .home-page .hero-content {
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 520px;
+    text-align: center;
 }
 
 .home-page .hero-title {
@@ -3168,8 +3174,11 @@ body {
 .home-page .hero-stats {
     display: flex;
     justify-content: center;
+    align-self: stretch;
+    margin-top: auto !important;
+    padding-top: 34px;
+    border-top: 1px solid rgba(212, 175, 55, 0.35);
     gap: 80px;
-    margin-top: 60px !important;
 }
 
 .home-page .hero-stats .stat-item {
