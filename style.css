@@ -104,7 +104,7 @@ body.loaded {
 /* 房产纠纷专区 */
 .property-dispute-section {
     padding: 90px 0;
-    background-color: var(--surface);
+    background-color: #f3f4f6;
 }
 
 .property-dispute-content {
@@ -121,8 +121,8 @@ body.loaded {
 
 .property-card {
     background: var(--surface);
-    border-radius: 8px;
-    padding: 28px;
+    border-radius: 12px;
+    padding: 40px;
     box-shadow: var(--shadow);
     height: 100%;
     transition: var(--transition);
@@ -156,33 +156,63 @@ body.loaded {
 }
 
 .case-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border-light);
+    padding: 0;
     position: relative;
-    padding-left: 35px;
     font-size: 1.0rem;
     transition: var(--transition);
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 18px;
     color: var(--text-primary);
 }
 
 .case-list li:last-child {
-    border-bottom: none;
+    margin-bottom: 0;
 }
 
 .case-list li:hover {
-    color: var(--accent-color);
-    transform: translateX(5px);
+    color: #7c0f1d;
+    transform: translateX(3px);
 }
 
-.case-list li i {
+.case-timeline {
+    position: relative;
+    padding-left: 0;
+}
+
+.case-timeline::before {
+    content: "";
     position: absolute;
-    left: 0;
-    color: var(--accent-color);
-    font-size: 1.1rem;
-    width: 25px;
-    text-align: center;
+    left: 9px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: linear-gradient(180deg, #d4af37, rgba(124, 15, 29, 0.28));
+}
+
+.timeline-dot {
+    width: 10px;
+    height: 10px;
+    margin-top: 6px;
+    border-radius: 50%;
+    background-color: #d4af37;
+    border: 2px solid #7c0f1d;
+    z-index: 1;
+}
+
+.timeline-content {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.8;
+}
+
+.timeline-content i {
+    color: #d4af37;
+    font-size: 1rem;
+    margin-top: 4px;
 }
 
 .property-logo {
@@ -220,30 +250,31 @@ body.loaded {
 .service-item {
     display: flex;
     align-items: center;
-    padding: 12px 15px;
-    background: var(--bg-body);
-    border-radius: 6px;
+    padding: 16px 18px;
+    background: #fff;
+    border-radius: 14px;
     transition: var(--transition);
     cursor: pointer;
-    border: 1px solid transparent;
+    border: 1px solid rgba(124, 15, 29, 0.08);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
 }
 
 .service-item:hover {
-    background: var(--surface);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
-    border-color: var(--accent-color);
+    background: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 22px rgba(124, 15, 29, 0.12);
+    border-color: rgba(212, 175, 55, 0.7);
 }
 
 .service-icon {
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: rgba(212, 175, 55, 0.18);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
+    color: #d4af37;
     font-size: 1.1rem;
     transition: var(--transition);
     flex-shrink: 0;
@@ -252,7 +283,7 @@ body.loaded {
 
 .service-item:hover .service-icon {
     transform: scale(1.05);
-    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    background: rgba(124, 15, 29, 0.12);
 }
 
 .service-text {
@@ -267,7 +298,7 @@ body.loaded {
 }
 
 .service-item:hover .service-title {
-    color: var(--accent-color);
+    color: #7c0f1d;
 }
 
 /* 導航欄 */
