@@ -2641,3 +2641,108 @@ body {
         padding: 16px;
     }
 }
+
+/* Mobile Visual Polish (<=768px) */
+@media (max-width: 768px) {
+    body {
+        background: linear-gradient(180deg, #6F1D2A 0%, #8f2b35 35%, #D4AF37 100%);
+        background-repeat: no-repeat;
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    p,
+    li,
+    label,
+    input,
+    textarea,
+    select {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .hero,
+    .property-dispute-section,
+    .team-section,
+    .why-choose-section,
+    .about-section,
+    .about-section-detail,
+    .contact-section {
+        background: transparent !important;
+    }
+
+    .hero-content,
+    .property-dispute-content,
+    .team-grid,
+    .why-choose-content,
+    .about-content,
+    .about-detail-content,
+    .contact-content {
+        display: grid;
+        gap: 14px;
+    }
+
+    .hero-text,
+    .stat-item,
+    .property-card,
+    .lawyer-card,
+    .why-choose-item,
+    .contact-form,
+    .contact-info {
+        border-radius: 12px;
+    }
+
+    .hero-actions,
+    .cta-buttons,
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn,
+    .submit-btn,
+    button,
+    input[type="submit"],
+    input[type="button"] {
+        min-height: 44px;
+        height: 44px;
+        border-radius: 12px;
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    .btn:hover,
+    .submit-btn:hover,
+    button:hover,
+    input[type="submit"]:hover,
+    input[type="button"]:hover {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content,
+    .property-dispute-content,
+    .team-grid,
+    .why-choose-content,
+    .about-content,
+    .about-detail-content,
+    .contact-content {
+        gap: 12px;
+    }
+
+    .btn,
+    .submit-btn,
+    button,
+    input[type="submit"],
+    input[type="button"] {
+        width: 100%;
+    }
+}
